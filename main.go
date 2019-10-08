@@ -49,7 +49,7 @@ func main() {
 		log.Fatal(err)
 	}
 	var src []byte
-	src = append([]byte("@startuml\n"), entry...)
+	src = append([]byte("@startuml\n\n!define type(x) <color:green>\"\"x\"\"</color>\n"), entry...)
 	src = append(src, rel...)
 	src = append(src, []byte("@enduml\n")...)
 
